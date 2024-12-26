@@ -143,6 +143,9 @@ input[type="submit"]:hover{
         padding: 0;
    
     }
+     .attribution{
+        display: none;
+    }
     .success-box{
         
         height: 100%;
