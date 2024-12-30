@@ -11,12 +11,11 @@ const dismissButton = document.querySelector("#dismiss-button");
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 subscribeButton.addEventListener("click", (e) => {
-    console.log("button don click");
 
     e.preventDefault();
     const emailValue = emailInput.value.trim();
 
-    if (!emailValue){
+    if (!emailRegex.test(emailInput.value)){
       wrongMessage.textContent = "Valid email required";
       wrongMessage.style.color = "red";
       wrongMessage.style.fontSize = "10px";
@@ -30,10 +29,8 @@ subscribeButton.addEventListener("click", (e) => {
        successBox.style.display ="block";
        userEmail.textContent = emailValue;
 }
-    console.log(emailValue);
 })
 dismissButton.addEventListener("click", (e) => {
-    console.log("dismiss don click");
 
     e.preventDefault();
     removeCont.style.display = "flex";
