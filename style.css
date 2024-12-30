@@ -76,6 +76,10 @@ input{
     border-radius: 7px;
     border: 1px solid grey;
 }
+input:focus{
+    border: 1px solid hsl(234, 29%, 20%);
+    outline: none;
+}
 input::placeholder{
     color: gray;
 }
@@ -169,7 +173,7 @@ input[type="submit"]:hover{
         display: none;
     }
     #right-image-mobile{
-        display: block;
+        display: flex;
         width: 100%;
     }
     .right-side{
